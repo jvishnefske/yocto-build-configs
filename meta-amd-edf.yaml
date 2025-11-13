@@ -1,0 +1,66 @@
+---
+header:
+  version: 9
+defaults:
+  repos:
+    branch: rel-v2025.1
+distro: amd-edf
+target: core-image-base
+machine: zynq-generic
+repos:
+  poky:
+    url: https://git.yoctoproject.org/poky
+    layers:
+      meta:
+      meta-poky:
+    branch: scarthgap
+  meta-openembedded:
+    url: https://git.openembedded.org/meta-openembedded
+    branch: scarthgap
+    layers:
+      meta-oe:
+      meta-python:
+      meta-filesystems:
+      meta-networking:
+  meta-amd-edf:
+    url: "https://github.com/Xilinx/meta-amd-edf"
+  meta-xilinx:
+    url: "https://github.com/Xilinx/meta-xilinx"
+    layers:
+      meta-xilinx-core:
+      meta-xilinx-standalone:
+      meta-xilinx-standalone-sdt:
+      meta-microblaze:
+      meta-xilinx-demos:
+      meta-xilinx-multimedia:
+      meta-xilinx-virtualization:
+  meta-security:
+    url: https://git.yoctoproject.org/meta-security
+    layers:
+      meta-tpm:
+      .:
+    branch: scarthgap
+  meta-virtualization:
+    url: https://github.com/Xilinx/meta-virtualization
+  meta-amp:
+    url: https://github.com/Xilinx/meta-openamp
+  meta-amd-adaptive-socs:
+    url: https://github.com/Xilinx/meta-amd-adaptive-socs
+    layers:
+      meta-amd-adaptive-socs-core:
+      meta-amd-adaptive-socs-bsp:
+  meta-ros:
+    url: https://github.com/Xilinx/meta-ros
+    layers:
+      meta-ros-common:
+      meta-ros2:
+      meta-ros2-jazzy:
+  meta-qt5:
+    url: https://github.com/meta-qt5/meta-qt5
+    branch: scarthgap
+  meta-arm:
+    url: https://git.yoctoproject.org/meta-arm
+    layers:
+      meta-arm:
+      meta-arm-toolchain:
+    branch: scarthgap
